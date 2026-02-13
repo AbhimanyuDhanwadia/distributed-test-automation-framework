@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "dtaf"
+version = "0.1.0"
+description = "Distributed Test Automation Framework"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "*"
+uvicorn = "*"
+redis = "*"
+pydantic = "*"
+pytest = "*"
+httpx = "*"
+prometheus-client = "*"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
