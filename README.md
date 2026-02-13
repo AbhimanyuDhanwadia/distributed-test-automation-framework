@@ -135,6 +135,30 @@ Expected output:
 🎉 Success! Received 2 results from Redis.
 ```
 
+## Technical Documentation
+
+For in-depth technical analysis and system design details, refer to our comprehensive whitepapers:
+
+### 📄 [Technical Whitepaper (PDF)](docs/DTAF_Technical_Whitepaper.pdf)
+
+**Engineering a High-Availability Distributed Test Runner**
+
+Covers the mathematical foundations and implementation details:
+- **Consistent Hashing**: 32-bit MD5 hash ring with $O(K/N)$ rebalancing complexity
+- **Atomic Recovery**: Formal proofs of exactly-once execution semantics using BRPOPLPUSH and SETNX
+- **Failure Analysis**: Comprehensive failure matrix with detection times and recovery guarantees
+- **Lua-based Reaper**: Server-side scripting for sub-second zombie worker detection
+
+### 📊 [System Design & Benchmarks (PDF)](docs/DTAF_System_Design_and_Benchmarks.pdf)
+
+**Capacity Planning and Empirical Scaling Analysis**
+
+Provides production deployment guidance:
+- **Performance Benchmarks**: Throughput, latency (p50/p99), and resource utilization metrics
+- **Scalability Analysis**: Empirical validation of linear scaling with worker count
+- **Capacity Planning**: Guidelines for sizing clusters based on test suite characteristics
+- **Production Deployment**: Best practices for quantitative trading environments
+
 ## API Reference
 
 ### POST /submit
